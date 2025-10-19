@@ -1,40 +1,65 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Auth.css";
 
 function Login() {
   const navigate = useNavigate();
 
   return React.createElement(
     "div",
-    { className: "login-page" },
-    React.createElement("h2", null, "CreatiVerse"),
+    { className: "auth-container" },
     React.createElement(
       "div",
-      { className: "login-card" },
-      React.createElement("h3", null, "Welcome!"),
-      React.createElement("p", null, "Login to your Account"),
-      React.createElement("input", { type: "text", placeholder: "Username" }),
-      React.createElement("input", { type: "email", placeholder: "Email" }),
-      React.createElement("input", { type: "password", placeholder: "Password" }),
+      { className: "auth-card" },
+      React.createElement("h1", { className: "auth-title" }, "CreatiVerse"),
       React.createElement(
-        "button",
-        { onClick: () => navigate("/home"), className: "btn-login" },
-        "Log In"
-      ),
-      React.createElement(
-        "p",
-        null,
-        "Don't have an account? ",
+        "div",
+        { className: "auth-box" },
+        React.createElement("h2", { className: "auth-header" }, "Wellcome!"),
         React.createElement(
-          "a",
+          "p",
+          { className: "auth-sub" },
+          "Login to your Account"
+        ),
+        React.createElement("input", {
+          type: "text",
+          placeholder: "Username",
+          className: "auth-input",
+        }),
+        React.createElement("input", {
+          type: "email",
+          placeholder: "Email",
+          className: "auth-input",
+        }),
+        React.createElement("input", {
+          type: "password",
+          placeholder: "Password",
+          className: "auth-input",
+        }),
+        React.createElement(
+          "button",
           {
-            href: "#",
-            onClick: (e) => {
-              e.preventDefault(); 
-              navigate("/signup");
-            },
+            className: "auth-button",
+            onClick: () => navigate("/home"),
           },
-          "Sign up"
+          "Log in"
+        ),
+        React.createElement(
+          "p",
+          { className: "auth-footer" },
+          "Don’t have an account? ",
+          React.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (e) => {
+                e.preventDefault();
+                navigate("/signup");
+              },
+              className: "auth-link",
+            },
+            "Sign up"
+          )
         )
       )
     )

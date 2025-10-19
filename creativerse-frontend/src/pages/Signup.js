@@ -1,25 +1,53 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Auth.css";
 
 function Signup() {
   const navigate = useNavigate();
 
   return React.createElement(
     "div",
-    { className: "signup-page" },
-    React.createElement("h2", null, "CreatiVerse"),
+    { className: "auth-container" },
     React.createElement(
       "div",
-      { className: "signup-card" },
-      React.createElement("h3", null, "Create your Account"),
-      React.createElement("input", { type: "text", placeholder: "Username" }),
-      React.createElement("input", { type: "email", placeholder: "Email" }),
-      React.createElement("input", { type: "password", placeholder: "Password" }),
-      React.createElement("input", { type: "password", placeholder: "Confirm Password" }),
+      { className: "auth-card" },
+      React.createElement("h1", { className: "auth-title" }, "CreatiVerse"),
       React.createElement(
-        "button",
-        { onClick: () => navigate("/home"), className: "btn-signup" },
-        "Sign Up"
+        "div",
+        { className: "auth-box" },
+        React.createElement(
+          "h2",
+          { className: "auth-header" },
+          "Create your Account"
+        ),
+        React.createElement("input", {
+          type: "text",
+          placeholder: "Username",
+          className: "auth-input",
+        }),
+        React.createElement("input", {
+          type: "email",
+          placeholder: "Email",
+          className: "auth-input",
+        }),
+        React.createElement("input", {
+          type: "password",
+          placeholder: "Password",
+          className: "auth-input",
+        }),
+        React.createElement("input", {
+          type: "password",
+          placeholder: "Confirm Password",
+          className: "auth-input",
+        }),
+        React.createElement(
+          "button",
+          {
+            className: "auth-button",
+            onClick: () => navigate("/home"),
+          },
+          "Sign Up"
+        )
       )
     )
   );
