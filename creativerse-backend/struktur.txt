@@ -1,0 +1,26 @@
+creativerse-backend/
+├── config/
+│   └── database.js
+├── controllers/
+│   ├── authController.js
+│   ├── productController.js
+│   ├── cartController.js
+│   └── paymentController.js
+├── models/
+│   ├── User.js
+│   ├── Product.js
+│   ├── Cart.js
+│   ├── Order.js
+│   └── Payment.js
+├── routes/
+│   ├── auth.js
+│   ├── products.js
+│   ├── cart.js
+│   └── payments.js
+├── middleware/
+│   ├── auth.js
+│   └── validation.js
+├── utils/
+│   └── helpers.js
+├── package.json
+└── server.js
